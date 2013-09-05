@@ -1,26 +1,27 @@
 
 public class ATOI {
-	public static int atoi(String s){
-		int res = 0;
-		boolean isNumber = true;
+	public int atoi(String s) {
+        int res = 0;
 		boolean isNegative = false;
-		if(s.length() == 0)
-			return -1;
+        if(s.length() == 0)
+            return 0;
 		if(s.startsWith("-")){
 			isNegative = true;
 			s = s.substring(1, s.length());
 		}
+		else if(s.startsWith("+")){
+			isNegative = false;
+			s = s.substring(1, s.length());
+		}
 		else{
 			if(s.charAt(0) < '0' || s.charAt(0) > '9'){
-				isNumber = false;
-				return -1;
+				return 0;
 			}
 		}
 		int counter = s.length() - 1;
 		for(int i = 0; i < s.length(); i++){
 			if(s.charAt(0) < '0' || s.charAt(0) > '9'){
-				isNumber = false;
-				return -1;
+				return 0;
 			}
 //			System.out.println(res);
 			res += (int) Math.pow((double) 10, (double) counter)*(s.charAt(i) - 48);
@@ -41,7 +42,7 @@ public class ATOI {
 		}
 	}
 	public static void main(String[] args){
-		String input = "";
-		System.out.println(atoi(input));
+		String input = "+1";
+		System.out.println(new ATOI().atoi(input));
 	}
 }
