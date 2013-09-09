@@ -29,7 +29,7 @@ public class ATOI {
 //			System.out.println(res);
 		}
 		if(isNegative){
-			if(res >= Integer.MAX_VALUE)
+			if(res > Integer.MAX_VALUE)
 				return Integer.MIN_VALUE;
 			else
 				return (0 - res);
@@ -42,7 +42,7 @@ public class ATOI {
 		}
 	}
 	public static void main(String[] args){
-		String input = "+1";
+		String input = "-2147483647";
 		System.out.println(new ATOI().atoi(input));
 	}
 }
