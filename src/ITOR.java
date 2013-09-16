@@ -52,10 +52,10 @@ public class ITOR {
 			}
 			romanNum = pre + suf;
 		}
-		else if(input > 5) {
+		else if(input >= 5) {
 //			System.out.println("I am here");
 			String pre = "";
-			if(input/10 == 9) {pre = pre.concat("IX");}
+			if(input == 9) {pre = pre.concat("IX");}
 			else {
 				pre = pre.concat("V");
 				for(int i = 0; i < input - 5; i++) {pre = pre.concat("I");}
@@ -132,7 +132,7 @@ public class ITOR {
 		return value;
 	}
 	public static void main(String[] args){
-		int input = 2008;
+		int input = 9;
 		System.out.println(itor(input));
 		String input2 = "I";
 		System.out.println(rtoi(input2));
