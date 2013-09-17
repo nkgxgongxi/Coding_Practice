@@ -53,7 +53,6 @@ public class ITOR {
 			romanNum = pre + suf;
 		}
 		else if(input >= 5) {
-//			System.out.println("I am here");
 			String pre = "";
 			if(input == 9) {pre = pre.concat("IX");}
 			else {
@@ -63,14 +62,12 @@ public class ITOR {
 			romanNum = pre;
 		}
 		else if(input > 0) {
-//			System.out.println("I am here");
 			String pre = "";
 			if(input == 4) {pre = pre.concat("IV");}
 			else {
 				for(int i = 0; i < input; i++) {pre = pre.concat("I");}
 			}
 			romanNum = pre;		
-//			System.out.println(pre);
 		}
 		else {
 			romanNum = "";
@@ -125,9 +122,8 @@ public class ITOR {
 			value += 1;
 			value += rtoi(input.substring(1));
 		}
-		else {
-//			System.out.println("Invalid output.");
-			
+		else {	
+			value += 0;
 		}
 		return value;
 	}
