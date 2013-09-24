@@ -2,18 +2,18 @@
 
 public class TreeOp {
 	public static void main(String[] args){
-		TreeNode head = new TreeNode("+");
-		head.left = new TreeNode("-");
-		head.right = new TreeNode("*");
-//		head.right = new TreeNode("3");
-		head.right.right = new TreeNode("4");
-		head.right.left = new TreeNode("5");
-		head.left.left = new TreeNode("7");
-		head.left.right = new TreeNode("8");
+		MyTreeNode head = new MyTreeNode("+");
+		head.left = new MyTreeNode("-");
+		head.right = new MyTreeNode("*");
+//		head.right = new MyTreeNode("3");
+		head.right.right = new MyTreeNode("4");
+		head.right.left = new MyTreeNode("5");
+		head.left.left = new MyTreeNode("7");
+		head.left.right = new MyTreeNode("8");
 		int counter = 0;
 		while(head.hasChildren()){
 			counter ++;
-			TreeNode temp = head;
+			MyTreeNode temp = head;
 //		System.out.println(temp.hasChildren());
 //		System.out.println(temp.right.value);
 			while(temp.hasRight()){

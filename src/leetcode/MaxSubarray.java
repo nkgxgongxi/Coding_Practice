@@ -1,4 +1,4 @@
-
+package leetcode;
 public class MaxSubarray {	
 	public static int getMaxValue(int[] array){
 		int current = array[0];
